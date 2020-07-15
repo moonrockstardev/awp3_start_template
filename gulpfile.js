@@ -14,7 +14,7 @@ let path = {
 	src: {
 		html: [`${sourceFolder}/*.html`, `!${sourceFolder}/_*.html`],
 		css: `${sourceFolder}/scss/style.scss`,
-		js: `${sourceFolder}/js/script.js`,
+		js: `${sourceFolder}/js/main.js`,
 		img: `${sourceFolder}/img/**/*.{jpg,png,svg,gif,ico,webp}`,
 		fonts: `${sourceFolder}/fonts/*.ttf`,
 	},
@@ -37,7 +37,8 @@ let { src, dest } = require('gulp'),
 	groupMedia = require('gulp-group-css-media-queries'),
 	cleanCss = require('gulp-clean-css'),
 	rename = require('gulp-rename'),
-	uglify = require('gulp-uglify-es').default,
+	babel = require('gulp-babel'),
+	terser = require('gulp-terser'),
 	imagemin = require('gulp-imagemin'),
 	webp = require('gulp-webp'),
 	webphtml = require('gulp-webp-html'),
@@ -100,8 +101,9 @@ function js() {
 	return src(path.src.js)
 		.pipe(fileInclude())
 		.pipe(dest(path.build.js))
+		.pipe(babel())
 		.pipe(
-			uglify()
+			terser()
 		)
 		.pipe(
 			rename({
