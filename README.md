@@ -5,7 +5,7 @@
 ---------------------------------------
 
 *In my starting template the following technologies are used:*
-* HTML .
+* HTML
 * CSS
 * JavaScript
 * jQuery
