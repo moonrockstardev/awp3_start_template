@@ -1,5 +1,6 @@
-@@include('jq-start.js')
-@@include('forms.js')
-@@include('script.js')
-@@include('jq-end.js')
-@@include('custom.js')
+'use strict'
+
+document.addEventListener('DOMContentLoaded', e => {
+   @@include('./general/webp.js')
+   @@include('./general/burger.js')
+})

@@ -1,6 +1,6 @@
 {
-  "name": "cleaning",
-  "version": "1.0.0",
+  "name": "awp3_start_template",
+  "version": "1.2.0",
   "description": "",
   "main": "index.html",
   "scripts": {
@@ -35,6 +35,6 @@
     "gulp-webp": "^4.0.1",
     "gulp-webp-html": "^1.0.2",
     "gulp-webpcss": "^1.1.1",
-    "webp-converter": "^2.2.3"
+    "webp-converter": "2.2.3"
   }
 }
